@@ -2,11 +2,29 @@
 
 <h1><%= @name_2 %>: 60HP </h1>
 
-<form action="/play" >
+<!-- <form action="/play" > -->
 
-<<button onclick=“myFunction()“>Click me</button>
+<form action="/attack", method='post'>
+<input type="submit" value="Attack">
 </form>
 
-<% if params[:attack]
-  print "attacked player 2"
-  end %>
+<!-- <button type="button" onclick="/attack">Attack</button> -->
+
+<% if session[:attack] == true %>
+  <p>Attacked player 2</p>
+<% end %>
+
+
+
+<!-- </form> -->
+<%# def attack(arg) %>
+  <!-- puts arg -->
+ <!-- end %> -->
+
+
+
+<!-- <button type="button" onclick="attack('Attack player 2')">Attack</button> -->
+<!-- </form> -->
+ <%# def attack(arg) %>
+  <!-- puts arg -->
+ <!-- end %> -->

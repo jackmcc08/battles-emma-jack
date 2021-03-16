@@ -21,4 +21,9 @@ class Battle < Sinatra::Base
     @name_2 = session[:name_2]
     erb(:play)
   end
+
+  post '/attack' do
+    session[:attack] = true
+    redirect '/play'
+  end
 end
