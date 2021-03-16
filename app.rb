@@ -1,8 +1,12 @@
 require 'sinatra/base'
-# set(:session_secret, "here be dragons")
 
 class Battle < Sinatra::Base
+  configure do
+    enable :sessions
+    set :session_secret, "secret"
+  end
+
   get '/' do
-    'Hello Battle!'
+    "Testing infrastructure working!"
   end
 end
