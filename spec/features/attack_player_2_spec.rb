@@ -3,6 +3,7 @@ feature 'testing_scenario' do
     sign_in_and_play
     visit('/play')
     click_button 'Attack'
+    expect(page).to have_content 'Emma: 50HP'
     expect(page).to have_content 'Attacked player 2'
   end
 end

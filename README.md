@@ -67,5 +67,20 @@ Done
 
 # 23. Attacking Player 2
 
-- [ ] Write a feature test for the User Story above
-- [ ] Pass this test with minimal implementation.
+- [x] Write a feature test for the User Story above
+- [x] Pass this test with minimal implementation.
+
+# 24. Extracting Logic to the Model
+
+- [x] Create a new spec file for a `Player` class, `spec/player_spec.rb`
+- [x] Give `Player` a tested method that returns its name
+- [x] `require` the `Player` class in your controller file, `app.rb`
+- [x] Instead of storing player names as strings in the `session`, store them as attributes of instances of the `Player` class in global variables (declared using `$`)
+- [x] Commit to memory the fact that using a global variable will ruin any tech tests you do, and promise to your pair partner that you never will
+- [x] Update your instance variables to reference the `Player` instances rather than the `session` keys
+- [x] Ensure all your tests still pass.
+
+# 25. Implementing Hit Points
+
+- [x] Write a feature test for the User Story above
+- [x] Pass this test with minimal implementation.

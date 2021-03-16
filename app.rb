@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/player'
 
 class Battle < Sinatra::Base
   configure do
@@ -11,19 +12,18 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    session[:name_1] = params[:name_1]
-    session[:name_2] = params[:name_2]
+    $Player1 = Player.new(params[:name_1])
+    $Player2 = Player.new(params[:name_2])
     redirect '/play'
   end
 
   get '/play' do
-    @name_1 = session[:name_1]
-    @name_2 = session[:name_2]
     erb(:play)
   end
 
   post '/attack' do
     session[:attack] = true
+    $Player2.under_attack
     redirect '/play'
   end
 end
