@@ -50,6 +50,22 @@ Done
 
 # 21. Viewing hit points
 
+- [x] Write a feature test for the User Story above
+- [x] Pass this test with minimal implementation.
+
+# 22. Test Helpers
+
+- [x] Make a new file, `spec/features/web_helpers.rb`
+- [x] `require` this file inside your `spec_helper.rb`
+- [x] Define a method inside this file, `sign_in_and_play`
+- [x] Extract code from your two feature tests that:
+  - visits the homepage,
+  - fills in the fields, and
+  - clicks submit
+- [x] Place this extracted code inside `sign_in_and_play`
+- [x] Replace these lengthy lines in your feature tests with a call to `sign_in_and_play`.
+
+# 23. Attacking Player 2
 
 - [ ] Write a feature test for the User Story above
 - [ ] Pass this test with minimal implementation.
