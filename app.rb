@@ -3,10 +3,22 @@ require 'sinatra/base'
 class Battle < Sinatra::Base
   configure do
     enable :sessions
-    set :session_secret, "secret"
+    set :session_secret, "here be dragons"
   end
 
   get '/' do
-    "Testing infrastructure working!"
+    erb(:index)
+  end
+
+  post '/names' do
+    session[:name_1] = params[:name_1]
+    session[:name_2] = params[:name_2]
+    redirect '/play'
+  end
+
+  get '/play' do
+    @name_1 = session[:name_1]
+    @name_2 = session[:name_2]
+    erb(:play)
   end
 end

@@ -14,11 +14,42 @@
 # 18. Getting test infrastructure set up
 
 - [x] Add a dependency for `capybara` to your Gemfile, and install using `bundle`.
-- [ ] In your `spec/spec_helper.rb` file
-  - [ ] Set your `RACK_ENV` to `test`.
-  - [ ] Require your Sinatra app file, `capybara`, `capybara/rspec` and `rspec`.
-  - [ ] Tell Capybara about your app class using `Capybara.app`.
-- [ ] In `spec/features`, write a feature test that checks that the homepage says `Testing infrastructure working!`.
-- [ ] Run `rspec` and check that your feature test fails with `1 example, 1 failure`.
-- [ ] Update your app so that the homepage displays `Testing infrastructure working!`.
-- [ ] Run `rspec` and check that your feature test passes.
+- [x] In your `spec/spec_helper.rb` file
+  - [x] Set your `RACK_ENV` to `test`.
+  - [x] Require your Sinatra app file, `capybara`, `capybara/rspec` and `rspec`.
+  - [x] Tell Capybara about your app class using `Capybara.app`.
+- [x] In `spec/features`, write a feature test that checks that the homepage says `Testing infrastructure working!`.
+      - THIS IS A FOLDER!!!!!!
+- [x] Run `rspec` and check that your feature test fails with `1 example, 1 failure`.
+      - IN THE RIGHT DIRECTORY!!!
+- [x] Update your app so that the homepage displays `Testing infrastructure working!`.
+- [x] Run `rspec` and check that your feature test passes.
+      - passed!
+
+
+# 19. Entering Players
+
+- [x] In `spec/features`, add a new Capybara feature test that expects players to fill in their names (in a form), submit that form, and see those names on-screen
+- [x] Create a `get '/'` route that renders a`index.erb` view with a form
+- [x] Point the `index.erb` form action to a `post '/names'` route
+- [x] Create a `post '/names'` route that uses `params` to render a `play.erb` view that displays the names
+- [x] Pass the feature test you wrote.
+
+Done
+
+# 20. POST/redirect/GET pattern
+
+- [x] Use `enable` to enable the `session` in Sinatra
+- [x] In the `post '/names'` route, store the player names in the `session`
+- [x] Write a `get '/play` route that renders the `play.erb` view you already wrote
+- [x] In the `get '/play'` route, extract the instance variables required by the view from the `session`
+- [x] Remove the `erb :play` expression from the `post '/names'` route, and replace it with a `redirect` to the `'/play'` route
+- [x] Ensure your `enter_names_spec` feature test still passes.
+
+Done
+
+# 21. Viewing hit points
+
+
+- [ ] Write a feature test for the User Story above
+- [ ] Pass this test with minimal implementation.
